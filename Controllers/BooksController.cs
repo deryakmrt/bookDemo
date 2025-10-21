@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using bookDemo.Data;
 using bookDemo.Models;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace bookDemo.Controllers
 {
@@ -9,7 +10,7 @@ namespace bookDemo.Controllers
                      kısmı, sınıfın adı olan "Books" kelimesini alarak adresi otomatik olarak /api/Books yapar.*/
     [ApiController]
     public class BooksController : ControllerBase
-    {
+    {   //====GET İSTEKLERİ====
         [HttpGet]
         public IActionResult GetAllBooks()
         {
@@ -32,7 +33,7 @@ namespace bookDemo.Controllers
               
             return Ok(book);
         }
-
+        //====POST İSTEKLERİ====
         [HttpPost]
         public IActionResult CreateOneBook([FromBody]Book book)
         {
@@ -51,5 +52,65 @@ namespace bookDemo.Controllers
             }
         }
 
+        //====PUT İSTEKLERİ====
+        [HttpPut("{id:int}")]
+        public IActionResult UpdateOneBook([FromRoute(Name = "id")] int id,
+            [FromBody] Book book)
+        {
+            //check book?
+            var entity = ApplicationContext
+                .Books
+                .Find(b => b.Id.Equals(id));
+            if (entity is null)
+                return NotFound();//404
+
+            //check id
+            if(id!= book.Id)
+                return BadRequest();//400
+            ApplicationContext.Books.Remove(entity);
+            book.Id = entity.Id;
+            ApplicationContext.Books.Add(book);
+                return Ok(book);
+
+        }
+
+        //====DELETE İSTEKLERİ====
+        [HttpDelete]
+        public IActionResult DeleteAllBooks()
+        {
+            ApplicationContext.Books.Clear();
+                return NoContent();//204
+        }
+
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteOneBooks([FromRoute(Name = "id")] int id)
+        {
+            var entity = ApplicationContext
+            .Books
+            .Find(b=>b.Id.Equals(id));
+
+            if (entity is null) return NotFound(new
+            {
+                statusCode = 404,
+                message = $"Book with id:{id} could not found."
+            });//404
+
+            ApplicationContext.Books.Remove(entity);
+                return NoContent();
+        }
+
+        //====PATCH İSTEKLERİ====
+        [HttpPatch("{id:int}")]
+        public IActionResult PartiallyUpdateOneBook([FromRoute(Name ="id")]int id, 
+            [FromBody] JsonPatchDocument <Book> bookPatch)
+        {
+            //check entity
+            var entity = ApplicationContext.Books.Find(b => b.Id.Equals(id));
+            
+            if(entity is null) return NotFound();//404
+
+            bookPatch.ApplyTo(entity);
+            return NoContent();//204
+        }
     }
 }
