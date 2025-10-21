@@ -30,3 +30,8 @@ D:\AspNetCoreWebApi\Applications\bookDemo\obj\Debug\net9.0\ref\bookDemo.dll
 D:\AspNetCoreWebApi\Applications\bookDemo\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\AspNetCoreWebApi\Applications\bookDemo\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\AspNetCoreWebApi\Applications\bookDemo\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\AspNetCoreWebApi\Applications\bookDemo\obj\Debug\net9.0\bookDemo.sourcelink.json
+D:\AspNetCoreWebApi\Applications\bookDemo\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\AspNetCoreWebApi\Applications\bookDemo\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\AspNetCoreWebApi\Applications\bookDemo\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\AspNetCoreWebApi\Applications\bookDemo\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
