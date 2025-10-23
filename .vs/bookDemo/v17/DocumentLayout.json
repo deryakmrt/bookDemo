@@ -31,15 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "bookDemo",
+              "Title": "bookDemo.csproj",
               "DocumentMoniker": "D:\\AspNetCoreWebApi\\Applications\\bookDemo\\bookDemo.csproj",
               "RelativeDocumentMoniker": "bookDemo.csproj",
               "ToolTip": "D:\\AspNetCoreWebApi\\Applications\\bookDemo\\bookDemo.csproj",
               "RelativeToolTip": "bookDemo.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-21T08:40:06.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T08:40:06.167Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
               "ToolTip": "D:\\AspNetCoreWebApi\\Applications\\bookDemo\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Controllers\\BooksController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAA5wG8AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T07:55:18.6Z",
               "EditorCaption": ""
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Data\\ApplicationContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T07:55:26.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T07:55:26.428Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Models\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T07:55:16.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T07:55:16.651Z"
             }
           ]
         }
